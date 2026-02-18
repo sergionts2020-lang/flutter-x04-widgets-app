@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:x04_widgets_app/presentation/screen/button/button_screen.dart';
 import 'package:x04_widgets_app/presentation/screen/card/card_screen.dart';
+import 'package:x04_widgets_app/presentation/screen/progress/progress_screen.dart';
 
 class MenuItem {
   final String name;
@@ -22,15 +23,22 @@ const appMenuItems = <MenuItem>[
   MenuItem(
     name: ButtonScreen.name,
     title: 'Buttons',
-    subtitle: 'Some flutter buttons',
+    subtitle: 'Some buttons',
     link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
   MenuItem(
     name: CardScreen.name,
     title: 'Cards',
-    subtitle: 'Some cards in flutter',
+    subtitle: 'Some cards',
     link: '/cards',
     icon: Icons.credit_card,
+  ),
+  MenuItem(
+    name: ProgressScreen.name,
+    title: 'Progress Indicators',
+    subtitle: 'Some progress indicators',
+    link: '/progress',
+    icon: Icons.refresh_rounded,
   ),
 ];
