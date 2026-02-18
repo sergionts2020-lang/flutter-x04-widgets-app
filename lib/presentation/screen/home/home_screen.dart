@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:x04_widgets_app/config/menu/menu_items.dart';
 import 'package:x04_widgets_app/presentation/screen/button/button_screen.dart';
+import 'package:x04_widgets_app/presentation/screen/card/card_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+
+  static const name = 'home_screen';
+
   const HomeScreen({super.key});
 
   @override
@@ -57,7 +61,10 @@ class _CustomListTitle extends StatelessWidget {
         
         // Forma 3 (con GoRouter)
         // context.go(menuItem.link); // Reemplaza la ruta actual por la nueva, sin posibilidad de volver atrás.
-        context.push(menuItem.link);
+        // context.push(menuItem.link);
+
+        // Forma 4 (con GoRouter y usando el name de las rutas)
+        context.pushNamed(menuItem.name);
       },
     );
   }

@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       routerConfig: appRouter,
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 4).getTheme(),
+      theme: AppTheme(selectedColor: 1).getTheme(),
 
       // Como estamos usando GoRouter, no es necesario definir el home ni las rutas, ya que se definen en el router.dart
       // home: const HomeScreen(),
