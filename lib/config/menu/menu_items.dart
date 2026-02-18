@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:x04_widgets_app/presentation/screen/button/button_screen.dart';
+import 'package:x04_widgets_app/presentation/screen/card/card_screen.dart';
 
 class MenuItem {
+  final String name;
   final String title;
   final String subtitle;
   final String link;
   final IconData icon;
 
   const MenuItem({
+    required this.name,
     required this.title,
     required this.subtitle,
     required this.link,
@@ -16,12 +20,14 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+    name: ButtonScreen.name,
     title: 'Buttons',
     subtitle: 'Some flutter buttons',
     link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
   MenuItem(
+    name: CardScreen.name,
     title: 'Cards',
     subtitle: 'Some cards in flutter',
     link: '/cards',
