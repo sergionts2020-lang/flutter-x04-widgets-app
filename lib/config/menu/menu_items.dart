@@ -50,6 +50,14 @@ const appMenuItems = <MenuItem>[
     title: 'Snackbars',
     subtitle: 'Some snackbars',
     link: '/snackbar',
-    icon: Icons.badge_rounded,
+    icon: Icons.sd_card_alert,
+  ),
+
+  MenuItem(
+    name: AnimatedContainerScreen.name,
+    title: 'Animated container',
+    subtitle: 'Magic with containers',
+    link: '/animated',
+    icon: Icons.star_half,
   ),
 ];
