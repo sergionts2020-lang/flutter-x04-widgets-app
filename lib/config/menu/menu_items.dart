@@ -60,4 +60,12 @@ const appMenuItems = <MenuItem>[
     link: '/animated',
     icon: Icons.star_half,
   ),
+
+  MenuItem(
+    name: UiControlsScreen.name,
+    title: 'UI Controls',
+    subtitle: 'Some UI controls',
+    link: '/uicontrols',
+    icon: Icons.control_point_duplicate_rounded,
+  ),
 ];
