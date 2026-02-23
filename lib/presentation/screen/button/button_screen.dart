@@ -23,7 +23,7 @@ class ButtonScreen extends StatelessWidget {
 }
 
 class _ButtosView extends StatelessWidget {
-  const _ButtosView({super.key});
+  const _ButtosView();
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +158,7 @@ class CustomButton extends StatelessWidget {
 class _SectionDividerTitle extends StatelessWidget {
   final String title;
 
-  const _SectionDividerTitle({super.key, required this.title});
+  const _SectionDividerTitle({required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -179,19 +179,6 @@ class _SectionDividerTitle extends StatelessWidget {
           const Expanded(child: Divider()),
         ],
       ),
-    );
-  }
-}
-
-class _SectionDivider extends StatelessWidget {
-  const _SectionDivider({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-
-      children: [const Expanded(child: Divider())],
     );
   }
 }
