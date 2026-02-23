@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:x04_widgets_app/presentation/screen/button/button_screen.dart';
-import 'package:x04_widgets_app/presentation/screen/card/card_screen.dart';
-import 'package:x04_widgets_app/presentation/screen/progress/progress_screen.dart';
 import 'package:x04_widgets_app/presentation/screen/screens.dart';
 
 class MenuItem {
@@ -76,5 +73,12 @@ const appMenuItems = <MenuItem>[
     link: '/tutorial',
     icon: Icons.question_mark_rounded,
   ),
-  
+
+    MenuItem(
+    name: InfiniteScrollScreen.name,
+    title: 'Infinite Scroll',
+    subtitle: 'Infinite scroll example',
+    link: '/infinite-scroll',
+    icon: Icons.screen_rotation_alt_outlined,
+  ),
 ];

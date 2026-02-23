@@ -15,7 +15,7 @@ class UiControlsScreen extends StatelessWidget {
 }
 
 class _UiControlsView extends StatefulWidget {
-  const _UiControlsView({super.key});
+  const _UiControlsView();
 
   @override
   State<_UiControlsView> createState() => _UiControlsViewState();
@@ -51,9 +51,21 @@ class _UiControlsViewState extends State<_UiControlsView> {
 
         createExpansionTile(),
 
-        createCheckboxListTile(wantsBreakfast, 'desayuno', (value) => setState(() => wantsBreakfast = value ?? false)),
-        createCheckboxListTile(wantsLunch, 'almuerzo', (value) => setState(() => wantsLunch = value ?? false)),
-        createCheckboxListTile(wantsDinner, 'cena', (value) => setState(() => wantsDinner = value ?? false))
+        createCheckboxListTile(
+          wantsBreakfast,
+          'desayuno',
+          (value) => setState(() => wantsBreakfast = value ?? false),
+        ),
+        createCheckboxListTile(
+          wantsLunch,
+          'almuerzo',
+          (value) => setState(() => wantsLunch = value ?? false),
+        ),
+        createCheckboxListTile(
+          wantsDinner,
+          'cena',
+          (value) => setState(() => wantsDinner = value ?? false),
+        ),
       ],
     );
   }
@@ -87,12 +99,16 @@ class _UiControlsViewState extends State<_UiControlsView> {
     );
   }
 
-  CheckboxListTile createCheckboxListTile(bool wantsValue, String label, Function(bool?) onChanged) {
+  CheckboxListTile createCheckboxListTile(
+    bool wantsValue,
+    String label,
+    Function(bool?) onChanged,
+  ) {
     return CheckboxListTile(
       title: Text('CheckboxListTile $label'),
       subtitle: Text('¿quiere $label?'),
       value: wantsValue,
-      onChanged: onChanged,        
+      onChanged: onChanged,
     );
   }
 }
