@@ -1,18 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:x04_widgets_app/config/menu/menu_items.dart';
+import 'package:x04_widgets_app/presentation/widget/side_menu_widget.dart';
 
 class HomeScreen extends StatelessWidget {
-
   static const name = 'home_screen';
 
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(title: const Text('Flutter + material3')),
       body: const _HomeView(),
+      drawer: SideMenuWidget(scaffoldKey: scaffoldKey,),
     );
   }
 }
@@ -46,17 +50,16 @@ class _CustomListTitle extends StatelessWidget {
       trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary),
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subtitle),
-      onTap: () {   
-        
+      onTap: () {
         // Forma 1 (son necesarias las rutas en el main.dart).
         // Navigator.pushNamed(context, menuItem.link);
-        
+
         // Forma 2
         // Navigator.of(context).push(
         //  MaterialPageRoute<void>(builder: (context) => const ButtonScreen()),
         // );
         //},
-        
+
         // Forma 3 (con GoRouter)
         // context.go(menuItem.link); // Reemplaza la ruta actual por la nueva, sin posibilidad de volver atrás.
         // context.push(menuItem.link);
