@@ -69,7 +69,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
     imagesIds.addAll([1, 2, 3, 4, 5].map((e) => lastId + e));
     setState(() {});
-    
+
     moveScrollToBottom();
   }
 

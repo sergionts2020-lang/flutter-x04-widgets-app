@@ -9,23 +9,29 @@ const colorList = <Color>[
   Colors.deepPurple,
   Colors.orange,
   Colors.pink,
-  Colors.pinkAccent
+  Colors.pinkAccent,
 ];
 
 class AppTheme {
   final int selectedColor;
+  final bool isDarkMode;
 
-  AppTheme({this.selectedColor = 0})
+  AppTheme({this.selectedColor = 0, this.isDarkMode = false})
     : assert(
         selectedColor >= 0 && selectedColor < colorList.length,
         'selectedColor must be between 0 and ${colorList.length - 1}',
       );
 
-  ThemeData getTheme() =>
-      ThemeData(
-        useMaterial3: true, 
-        colorSchemeSeed: colorList[selectedColor],
-        appBarTheme: const AppBarTheme(
-          centerTitle: true,
-        ));
+  ThemeData getTheme() => ThemeData(
+    useMaterial3: true,
+    brightness: isDarkMode ? Brightness.dark : Brightness.light,
+    colorSchemeSeed: colorList[selectedColor],
+    appBarTheme: const AppBarTheme(centerTitle: true),
+  );
+
+  // sirve para copiar la instancia de la clase. Recibimos de forma opcional y aplicamos el orginal si no llega nada.
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkMode: isDarkMode ?? this.isDarkMode,
+  );
 }

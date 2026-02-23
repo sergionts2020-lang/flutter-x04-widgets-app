@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:x04_widgets_app/presentation/screen/screens.dart';
+import 'package:x04_widgets_app/config/screens.dart';
+
 
 class MenuItem {
   final String name;
@@ -25,7 +26,7 @@ const appMenuItems = <MenuItem>[
     link: '/buttons',
     icon: Icons.smart_button_outlined,
   ),
-  
+
   MenuItem(
     name: CardScreen.name,
     title: 'Cards',
@@ -33,7 +34,7 @@ const appMenuItems = <MenuItem>[
     link: '/cards',
     icon: Icons.credit_card,
   ),
-  
+
   MenuItem(
     name: ProgressScreen.name,
     title: 'Progress Indicators',
@@ -74,11 +75,28 @@ const appMenuItems = <MenuItem>[
     icon: Icons.question_mark_rounded,
   ),
 
-    MenuItem(
+  MenuItem(
     name: InfiniteScrollScreen.name,
     title: 'Infinite Scroll',
     subtitle: 'Infinite scroll example',
     link: '/infinite-scroll',
     icon: Icons.screen_rotation_alt_outlined,
   ),
+
+  MenuItem(
+    name: CounterScreen.name,
+    title: 'Counter Scrren',
+    subtitle: 'Counter screen with RIVERPOD',
+    link: '/counter',
+    icon: Icons.calculate_outlined,
+  ),
+
+  MenuItem(
+    name: ThemeChangerScreen.name,
+    title: 'Theme Changer Screen',
+    subtitle: 'Theme Changer screen with RIVERPOD',
+    link: '/theme-changer',
+    icon: Icons.palette_outlined,
+  ),
+
 ];

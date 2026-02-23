@@ -1,6 +1,6 @@
 // GoRouter configuration
 import 'package:go_router/go_router.dart';
-import 'package:x04_widgets_app/presentation/screen/screens.dart';
+import 'package:x04_widgets_app/config/screens.dart';
 
 // ssc documentación https://pub.dev/packages/go_router
 final appRouter = GoRouter(
@@ -14,6 +14,8 @@ final appRouter = GoRouter(
     GoRoute(path: '/uicontrols', name: UiControlsScreen.name, builder: (context, state) => const UiControlsScreen()),
     GoRoute(path: '/tutorial', name: AppTutorialScreen.name, builder: (context, state) => const AppTutorialScreen()),
     GoRoute(path: '/infinite-scroll', name: InfiniteScrollScreen.name, builder: (context, state) => const InfiniteScrollScreen()),
+    GoRoute(path: '/counter', name: CounterScreen.name, builder: (context, state) => const CounterScreen()),
+    GoRoute(path: '/theme-changer', name: ThemeChangerScreen.name, builder: (context, state) => const ThemeChangerScreen()),
 
   ],
 );
